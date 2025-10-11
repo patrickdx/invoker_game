@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One of my favorites.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <video muted loop autoplay id="bg-video">
+        <source src="./assets/wallpapers/wrarcana.webm" type="video/webm">
+    </video>
+    <h1 class="title">INVOKER GAME</h1>
+
+    <div class="gamePanel">
+        
+        <div class="leftPanel panel">
+            <H2>GAMEMODES</H2>
+            <div class="gamemodes">
+                <button onclick="resetGame()">RESET</button>
+                <button>NOTHING HERE</button>
+                <button>DONT CLICK THIS</button>
+
+            </div>
+            
+        </div>
+
+        <!-- main panel -->
+        <div class="mainPanel panel">
+            <h2>PLAY</h2>
+            <img class="icon" id="desiredSpell" name="Cold Snap" src="./assets/icons/Cold_Snap_icon.png" alt="">
+            <div class="spell-casting">
+                <div class="spell-orbs">
+                    <img class="icon" name="quas" src="./assets/icons/Quas_icon.png" alt="">
+                    <img class="icon" name="quas" src="./assets/icons/Quas_icon.png" alt="">
+                    <img class="icon" name="quas"src="./assets/icons/Quas_icon.png" alt="">
+                </div>
+            <h3 id="score">Score: 0</h3>
+                
+            </div>  
+        </div>
+
+            
+        <!-- right panel -->
+        <div class="rightPanel panel"> 
+            <h2>INVOKE LIST</h2>
+            <ul class="spells">
+                <li class="spell-row">
+                    <img src="./assets/icons/Cold_Snap_icon.png">
+                    <div class="key q">Q</div>
+                    <div class="key q">Q</div>
+                    <div class="key q">Q</div>
+                </li>
+                <li class="spell-row">
+                    <img src="./assets/icons/Ghost_Walk_icon.png">
+                    <div class="key q">Q</div>
+                <div class="key q">Q</div>
+                    <div class="key w">W</div>
+                </li>
+                <li class="spell-row">
+                    <img src="./assets/icons/Ice_Wall_icon.png">
+                    <div class="key q">Q</div>
+                    <div class="key q">Q</div>
+                    <div class="key e">E</div>
+                </li>
+                <li class="spell-row">
+                    <img src="./assets/icons/E.M.P._icon.png">
+                    <div class="key w">W</div>
+                    <div class="key w">W</div>
+                    <div class="key w">W</div>
+                </li>
+                <li class="spell-row">
+                    <img src="./assets/icons/Tornado_icon.png">
+                    <div class="key w">W</div>
+                    <div class="key w">W</div>
+                    <div class="key q">Q</div>
+                </li>
+                <li class="spell-row">
+                    <img src="./assets/icons/Alacrity_icon.png">
+                    <div class="key w">W</div>
+                    <div class="key w">W</div>
+                    <div class="key e">E</div>
+                </li>
+                <li class="spell-row">
+                    <img src="./assets/icons/Deafening_Blast_icon.png">
+                    <div class="key q">Q</div>
+                    <div class="key w">W</div>
+                    <div class="key e">E</div>
+                </li>
+                <li class="spell-row">
+                    <img src="./assets/icons/Sun_Strike_icon.png">
+                    <div class="key e">E</div>
+                    <div class="key e">E</div>
+                    <div class="key e">E</div>
+                </li>
+                <li class="spell-row">
+                    <img src="./assets/icons/Forge_Spirit_icon.png">
+                    <div class="key e">E</div>
+                    <div class="key e">E</div>
+                    <div class="key q">Q</div>
+                </li>
+                <li class="spell-row">
+                    <img src="./assets/icons/Chaos_Meteor_icon.png">
+                    <div class="key e">E</div>
+                    <div class="key e">E</div>
+                    <div class="key w">W</div>
+                </li>
+                
+            </ul>
+            
+        </div>
+
+
+        
+        
+    </div>
+    
+
+
+    
+</body>
+</html>
