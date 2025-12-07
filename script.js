@@ -20,7 +20,8 @@ const scoreDisplay = document.getElementById('score');
 let score = 0; 
 
 // Initialize volume from localStorage or default to 10%
-const savedVolume = parseInt(localStorage.getItem('gameVolume')) || 10;
+const parsedVolume = parseInt(localStorage.getItem('gameVolume'));
+const savedVolume = isNaN(parsedVolume) ? 10 : parsedVolume;
 keyPressSound.volume = savedVolume / 100;
 invokeSound.volume = savedVolume / 100;
 
