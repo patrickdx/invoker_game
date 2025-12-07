@@ -20,7 +20,7 @@ const scoreDisplay = document.getElementById('score');
 let score = 0; 
 
 // Initialize volume from localStorage or default to 10%
-const savedVolume = localStorage.getItem('gameVolume') || 10;
+const savedVolume = parseInt(localStorage.getItem('gameVolume')) || 10;
 keyPressSound.volume = savedVolume / 100;
 invokeSound.volume = savedVolume / 100;
 
@@ -28,18 +28,20 @@ invokeSound.volume = savedVolume / 100;
 const volumeSlider = document.getElementById('volumeSlider');
 const volumeValue = document.getElementById('volumeValue');
 
-// Set initial slider value
-volumeSlider.value = savedVolume;
-volumeValue.textContent = `${savedVolume}%`;
+// Set initial slider value (check if elements exist)
+if (volumeSlider && volumeValue) {
+    volumeSlider.value = savedVolume;
+    volumeValue.textContent = `${savedVolume}%`;
 
-// Update volume when slider changes
-volumeSlider.addEventListener('input', function() {
-    const volume = this.value;
-    keyPressSound.volume = volume / 100;
-    invokeSound.volume = volume / 100;
-    volumeValue.textContent = `${volume}%`;
-    localStorage.setItem('gameVolume', volume);
-});
+    // Update volume when slider changes
+    volumeSlider.addEventListener('input', function() {
+        const volume = this.value;
+        keyPressSound.volume = volume / 100;
+        invokeSound.volume = volume / 100;
+        volumeValue.textContent = `${volume}%`;
+        localStorage.setItem('gameVolume', volume);
+    });
+}
 
 // Listen for key presses
 document.addEventListener('keydown', handleKeyPress);
